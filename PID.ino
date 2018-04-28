@@ -23,7 +23,7 @@ double consKp=1.75, consKi=0.001, consKd=0.08;//
 //Specify the links and initial tuning parameters
 PID myPID(&Input, &Output, &Setpoint, consKp, consKi, consKd, DIRECT);
 
-void setup()
+void setup(){
   Serial.begin(115200);
   pinMode(PWM_PIN, OUTPUT);
   myPID.SetMode(AUTOMATIC);
